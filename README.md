@@ -23,19 +23,46 @@
 
    <p align="">
    <h2>step 1    Install kubectl and aws-iam-authenticator on a jenkins server</h2>
+   ssh into jenkins container as root user ( docker exec -u 0 -it containerNo bash)
+   install kubectl 
+   check documentation for installation
+   curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/          linux/amd64/kubectl
+
+   add execution permission to ./kubectl
+   chmod +x ./kubectl
+
+   move ./kubectl to local folder
+   mv ./kubectl /usr/local/bin
   
    <img src='./img/w2.png' height="80%" width="80%" alt="Disk Sanitization Steps">
+
+   install aws-iam-authenticator in jenkins container
+   check documentation for installation guide
+
+   1. download using curl command
+
+   curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.15.10/2020-02-22/bin/linux/amd64/aws-iam-authenticator
+
+   2. add executable permission to aws-iam-authenticator
+      chmod +x ./aws-iam-authenticator
+
+   3. move the file to usr/local/bin folder
+      mv ./aws-iam-authenticator /usr/local/bin
+   <img src='./img/w3.png' height="80%" width="80%" alt="Disk Sanitization Step">
+
 
  
 
 
    <h2>step 2  Create kubeconfig file to connect to EKS cluster and add it on Jenkins server</h2>
+    
   
   <img src='./img/w3.png' height="80%" width="80%" alt="Disk Sanitization Step"> 
 
   
 
    <h2>step 3 Add AWS credentials on Jenkins for AWS account authentication</h2>
+   
 
    <img src='./img/w4.png' height="80%" width="80%" alt="Disk Sanitization Step"> 
    
