@@ -25,7 +25,7 @@ pipeline{
       steps{
         script{
           echo "deploying into EKS cluster"
-          sh "kubectl create deployment nginx-deployment --image=nginx"
+          sh "kubectl create deployment ngin-deployment --image=nginx"
           sh "kubectl create deployment mongo-dpl --image=mongodb"
 
         }
