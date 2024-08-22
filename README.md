@@ -41,15 +41,12 @@
    install aws-iam-authenticator in jenkins container   <br/>
    check documentation for installation guide  <br/>
 
-   1. download using curl command   <br/>
+   download using curl command   <br/>
 
-        curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.15.10/2020-02-22/bin/linux/amd64/aws-iam-authenticator <br/>
+      curl -Lo aws-iam-authenticator https://github.com/kubernetes-sigs/aws-iam-authenticator/releases/download/v0.6.11/aws-iam-                       authenticator_0.6.11_linux_amd64
+      chmod +x ./aws-iam-authenticator
+      mv ./aws-iam-authenticator /usr/local/bin
 
-   2. add executable permission to aws-iam-authenticator  <br/>
-        chmod +x ./aws-iam-authenticator    <br/>
-
-   3. move the file to usr/local/bin folder   <br/>
-        mv ./aws-iam-authenticator /usr/local/bin
    
    
    <img src='./img/w3.png' height="80%" width="80%" alt="Disk Sanitization Step">
