@@ -18,15 +18,16 @@ pipeline{
       
     }
     stage("deploy"){
-      environment {
-        AWS_ACCESS_KEY_ID = credentials('aws-access-key')
-        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
-      }
+    
       steps{
         script{
           echo "deploying into EKS cluster"
-          sh "kubectl create deployment ngin-deployment --image=nginx"
-          sh "kubectl create deployment mongo-dpl --image=mongodb"
+          withKubeConfig([credentialsId:"linode-kube", serverUrl: "https://0538af3c-30f6-42f3-a88d-627a5182b1ef.eu-central-2.linodelke.net"]){
+            sh "kubectl create deployment ngin-deployment --image=nginx"
+
+          }
+          
+         
 
         }
       }
