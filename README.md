@@ -89,8 +89,8 @@
 
    Set the created credentials in Jenkins as environmental variables in Jenkinsfile  <br/>
              environment {
-                 AWS_ACCESS_KEY = credentials("nameOfId")
-                 AWS_SECRET_KEY = credentials("nameOFId")
+                 AWS_ACCESS_KEY = credentialsId("nameOfId")
+                 AWS_SECRET_KEY = credentialsId("nameOFId")
               }
   
    
