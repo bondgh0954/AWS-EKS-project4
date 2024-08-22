@@ -63,9 +63,9 @@
 
    <h2>step 2  Create kubeconfig file to connect to EKS cluster and add it on Jenkins server</h2>
 
-     Create a kubeconfig file to connect to EKS cluster <br/>
-     1. add your cluster name  <br/>
-     2. add the cluster endpoint <br/>
+     Create a kubeconfig file to connect to EKS cluster 
+     1. add your cluster name  
+     2. add the cluster endpoint 
      3. add 
     
   
