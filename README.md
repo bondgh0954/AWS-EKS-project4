@@ -27,14 +27,11 @@
    ssh into jenkins container as root user ( docker exec -u 0 -it containerNo bash)<br/>
    install kubectl <br/>
    check documentation for installation: <br/>
-          curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/           bin/linux/amd64/kubectl
+   add execution permission to ./kubectl  <br/>
+   move ./kubectl to local folder  
 
+          curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/           bin/linux/amd64/kubectl; chmod +x ./kubectl; mv ./kubectl /usr/local/bin/kubectl
 
-  add execution permission to ./kubectl  <br/>
-      chmod +x ./kubectl   
-
-  move ./kubectl to local folder  
-      mv ./kubectl /usr/local/bin  
   
    <img src='./img/w2.png' height="80%" width="80%" alt="Disk Sanitization Steps">
 
