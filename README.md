@@ -33,7 +33,7 @@
           curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/           bin/linux/amd64/kubectl; chmod +x ./kubectl; mv ./kubectl /usr/local/bin/kubectl
 
   
-   <img src='./img/w2.png' height="80%" width="80%" alt="Disk Sanitization Steps">
+   <img src='./ym/y1.png' height="80%" width="80%" alt="Disk Sanitization Steps">
 
 
    
@@ -49,7 +49,7 @@
 
    
    
-   <img src='./img/w3.png' height="80%" width="80%" alt="Disk Sanitization Step">
+   <img src='./ym/y2.png' height="80%" width="80%" alt="Disk Sanitization Step">
 
 
  
@@ -60,10 +60,10 @@
      Create a kubeconfig file to connect to EKS cluster 
      1. add your cluster name  
      2. add the cluster endpoint 
-     3. add 
+     3. add certificate-authority-data from cluster kubeconfig file
     
   
-  <img src='./img/w3.png' height="80%" width="80%" alt="Disk Sanitization Step"> 
+  <img src='./ym/y3.png' height="80%" width="80%" alt="Disk Sanitization Step"> 
 
 
   Create a ".kube" directory in the "/var/jenkins_home/" directory and copy the config file to this directory <br/>
@@ -88,7 +88,7 @@
    <h2>step 4  Extend and adjust Jenkinsfile of the previous CI/CD pipeline to configure connection to EKS cluster</h2>
 
    Set the created credentials in Jenkins as environmental variables in Jenkinsfile  <br/>
-         eg:  environment {
+             environment {
                  AWS_ACCESS_KEY = credentials("nameOfId")
                  AWS_SECRET_KEY = credentials("nameOFId")
               }
