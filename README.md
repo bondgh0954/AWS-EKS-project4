@@ -27,15 +27,14 @@
    ssh into jenkins container as root user ( docker exec -u 0 -it containerNo bash)<br/>
    install kubectl <br/>
    check documentation for installation: <br/>
-         curl -LO https://storage.googleapis.com/kubernetes-release/release/       <br/>
-         $(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)      <br/>
-         /bin/linux/amd64/kubectl   <br/>
+        curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/           bin/linux/amd64/kubectl
 
-   add execution permission to ./kubectl  <br/>
-   chmod +x ./kubectl   <br/>
 
-   move ./kubectl to local folder  <br/>
-   mv ./kubectl /usr/local/bin  <br/>
+  add execution permission to ./kubectl  <br/>
+      chmod +x ./kubectl   <br/>
+
+  move ./kubectl to local folder  <br/>
+      mv ./kubectl /usr/local/bin  <br/>
   
    <img src='./img/w2.png' height="80%" width="80%" alt="Disk Sanitization Steps">
 
@@ -47,13 +46,13 @@
 
    1. download using curl command   <br/>
 
-   curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.15.10/2020-02-22/bin/linux/amd64/aws-iam-authenticator <br/>
+        curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.15.10/2020-02-22/bin/linux/amd64/aws-iam-authenticator <br/>
 
    2. add executable permission to aws-iam-authenticator  <br/>
-      chmod +x ./aws-iam-authenticator    <br/>
+        chmod +x ./aws-iam-authenticator    <br/>
 
    3. move the file to usr/local/bin folder   <br/>
-      mv ./aws-iam-authenticator /usr/local/bin
+        mv ./aws-iam-authenticator /usr/local/bin
    
    
    <img src='./img/w3.png' height="80%" width="80%" alt="Disk Sanitization Step">
