@@ -13,8 +13,8 @@ pipeline {
     }
     stage('deploying application'){
       environment {
-        AWS_ACCESS_KEY = credentials('access-key')
-        AWS_SECRET_KEY = credentials('secrete-key')
+        AWS_ACCESS_KEY_ID = credentials('access-key')
+        AWS_SECRET_KEY_ID = credentials('secrete-key')
       }
       steps{
         script{
