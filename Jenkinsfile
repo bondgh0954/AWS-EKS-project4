@@ -1,25 +1,25 @@
 pipeline {
   agent any
   tools {
-    maven "maven"
+    maven 'maven'
   }
   stages{
-    stage("build jar"){
+    stage('build jar'){
       steps{
         script{
           echo "building image artifact"
         }
       }
     }
-    stage("deploying application"){
+    stage('deploying application'){
       environment {
-        AWS_ACCESS_KEY = credentials("access-key")
-        AWS_SECRET_KEY = credentials("secrete-key")
+        AWS_ACCESS_KEY = credentials('access-key')
+        AWS_SECRET_KEY = credentials('secrete-key')
       }
       steps{
         script{
-          echo "deploying application into kubernetes cluster"
-          sh "kubectl create deployment nginx-depl --image=nginx"
+          echo 'deploying application into kubernetes cluster'
+          sh 'kubectl create deployment nginx-depl --image=nginx'
         }
       }
     }
